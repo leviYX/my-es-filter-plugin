@@ -1,9 +1,11 @@
 # 1、简介
 就是一个插件
 
-# 2、使用就是mvn clean install
-然后把生成的zip插件安装到ES中
-
+# 2、打包编译
+mvn clean install
+然后把生成的zip插件安装到ES中,具体操作如下：把生成的zip包放到指定目录下比如D:\plugins。进入es的bin目录执行
+elasticsearch-plugin.bat install file:///D:\plugins\levi-replace-processsor-1.0.0-SNAPSHOT.zip
+然后重启es，日志中会加载该组件。
 # 3、创建管道使用
 # 建立索引
 ~~~json
